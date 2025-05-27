@@ -1,0 +1,69 @@
+CS525 Advanced Database Organization- Assignment 2:Buffer Manager
+Team Information:
+Group 22-
+Arunachalam Barathidasan (abarathidasan@hawk.iit.edu)
+Sejal Srivastav (ssrivastav@hawk.iit.edu)
+Prathiksha Shirsat (pshirsat@hawk.iit.edu)
+
+Contribution:
+Each team member equally contributed to this assignment.
+
+Summary:
+Buffer manager assignment helped us to understand how to manage memory and buffer pools. In this we have implemented buffer manager which can manage fixed number of pages and also strategies like First In First Out (FIFO) and Least Recently Used (LRU) for page replacement. The buffer manager also interacted with the storage manager developed in Assignment 1. In addition, debugging and memory management practices were applied to prevent memory leaks. A make file was used for compilation and execution of the assignment.
+
+*** Note: This program was coded and executed in windows hence we have make clean function with del command. ***
+
+Running the Program:
+test_assign2_1:
+a. Using VSCode:
+1. Open the project folder.
+2. Press `Ctrl + `` to open the terminal. 
+3. Run the command make all in the terminal. (make all)
+4. Run make runtest1 to execute the program. (make runtest1)
+5. Use the command make clean to remove files. (make clean)
+
+b.Using Command Prompt (CMD):
+1. Navigate to the assignment directory with cd.
+2. Ensure that the working directory is assign2_buffer_manager.
+3. Run the command make all.
+4. Run make runtest1
+4. Use the command make clean to delete files.
+
+test_assign2_2:
+a. Using VSCode:
+1. Open the project folder.
+2. Press `Ctrl + `` to open the terminal. 
+3. Run the command make all in the terminal. (make all)
+4. Run make runtest2 to execute the program. (make runtest2)
+5. Use the command make clean to remove files. (make clean)
+
+b.Using Command Prompt (CMD):
+1. Navigate to the assignment directory with cd.
+2. Ensure that the working directory is assign2_buffer_manager.
+3. Run the command make all.
+4. Run make runtest2
+4. Use the command make clean to delete files.
+
+Makefile Breakdown:
+
+Warning Flag (-Wall): Common warnings are displayed.
+Compiler (CC = GCC): The C compiler is specified as GCC.
+Files: The totalfiles variable includes all source files like buffer_mgr.c, storage_mgr.c, and test_assign2_1.c.
+Object Files: Object files are stored in the tfiles variable with .o extensions.
+Compilation Process: The make file compiles and builds the assignment.
+Clean Command: The del command is used to delete files on Windows. For macOS, rm -f is used.
+
+Buffer Manager:
+
+1. Pinning Pages: The pinPage function loads a requested page from disk into memory, allocating space in the buffer. If more pages are needed, the ensureCapacity function ensures sufficient space in the file.
+2. Page Replacement: If the buffer pool is full, selectVictimFrame determines which page to replace based on the current strategy (FIFO or LRU). The uptheteLRU function updates the age of pages for LRU.
+3. Handling Dirty Pages: Pages modified by clients are marked as dirty using markDirty. Before evicting dirty pages, they are written back to disk.
+Tracking Usage: getFixCounts and getDirtyFlags keep track of how often pages are pinned and whether they have been modified.
+4. Input/Output Operations: We have 2 functions namely getNumReadIO and getNumWriteIO that counts the number of reads and writes that have been performed by the buffer manager. 
+5. LRU-K: The uptheteLRUK function handles the LRU-K replacement strategy by keeping track of the last K access times for each page.
+
+Additional Features:
+
+1. Error Handling: Error-checking ensures that functions handle invalid page numbers, memory allocation issues, and file handle problems.
+2. Statistics Interface: Functions like getFrameContents and printPoolContent provide details on the current state of the buffer pool.
+3. Debugging and Memory Management: We used various debugging tools to ensure correct memory handling and avoid memory leaks during the implementation of the buffer manager.
