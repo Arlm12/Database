@@ -1,13 +1,6 @@
 # CS 525: Advanced Database Organization Fall 2024
 Assignment 4: B+ Tree
 
-# Information about the team:
-Group 22: Arunachalam Barathidasan(abarathidasan@hawk.iit.edu)
-          Sejal Srivastav (ssrivastav@hawk.iit.edu)
-          Prathiksha Shirsat (pshirsat@hawk.iit.edu)
-
----
-
 ## Overview
 
 In this assignment, we developed a B+-tree index, structured to store and manage data efficiently in a
