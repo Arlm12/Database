@@ -1,13 +1,6 @@
 # CS 525: Advanced Database Organization Fall 2024
 Assignment 3: Record Manager
 
-# Information about the team:
-Group 22: Arunachalam Barathidasan(abarathidasan@hawk.iit.edu)
-          Sejal Srivastav (ssrivastav@hawk.iit.edu)
-          Prathiksha Shirsat (pshirsat@hawk.iit.edu)
-
----
-
 ## Overview
 
 This README provides an overview of the implementation for the Record Manager, which manages database tables, records, and scans for CS 525: Advanced Database Organization. 
