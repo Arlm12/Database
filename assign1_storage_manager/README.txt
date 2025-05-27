@@ -1,11 +1,6 @@
 CS525 Advanced Database Organization Fall 2024
 Assignment 1 - Storage Manager
 
-Information about the team:
-Group 22: Arunachalam Barathidasan(abarathidasan@hawk.iit.edu)
-          Sejal Srivastav (ssrivastav@hawk.iit.edu)
-          Prathiksha Shirsat (pshirsat@hawk.iit.edu)
-
 Contribution: The members of the team have equal contibution. 
 Outcome: This assignment helped us in understanding how concepts of filehandling, file manipulation and error handling. 
 We also learnt two data structure concepts that are available in the assignment. The make file is also created which is
